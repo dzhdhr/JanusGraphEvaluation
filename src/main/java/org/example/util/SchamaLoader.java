@@ -13,6 +13,11 @@ import org.janusgraph.core.schema.PropertyKeyMaker;
 import org.janusgraph.graphdb.database.management.ManagementSystem;
 
 public class SchamaLoader {
+    /**
+     * @description: method for loading all keys
+     * @param management target graph's mangement
+     * @param keys all keys need to be loaded to schema
+     * */
     public static void LoadKey(JanusGraphManagement management, PropertyKeyModel[] keys){
 
         for (PropertyKeyModel elem:keys){
@@ -40,6 +45,11 @@ public class SchamaLoader {
         management.commit();
     }
     //TODO write LoadIndices
+    /**
+     * @description: method for loading all index
+     * @param graph target graph
+     * @param indexModels index need to be loaded to schema
+     * */
     public static void LoadIndices(JanusGraph graph, IndexModel[]indexModels) throws InterruptedException {
         JanusGraphManagement management = graph.openManagement();
         for(IndexModel i :indexModels){
@@ -74,6 +84,11 @@ public class SchamaLoader {
         }
 
     }
+    /**
+     * @description: method for loading all vertex labels
+     * @param management target graph's mangement
+     * @param vertexLabels file of vertex Label
+     * */
     public static void LoadVertexLabels(JanusGraphManagement management, VertexModel[]vertexLabels){
         for (VertexModel elem : vertexLabels) {
             management.makeVertexLabel(elem.getName()).make();
@@ -81,6 +96,11 @@ public class SchamaLoader {
         management.commit();
 
     }
+    /**
+     * @description: method for loading all edge schema
+     * @param management target graph's management
+     * @param edgeModels all edge schema
+     * */
     public static void LoadEdgeProperty(JanusGraphManagement management, EdgeModel[]edgeModels){
         for (EdgeModel elem : edgeModels) {
             EdgeLabelMaker maker= management.makeEdgeLabel(elem.getName());

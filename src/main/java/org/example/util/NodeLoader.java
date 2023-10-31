@@ -13,6 +13,11 @@ import java.util.List;
 public class NodeLoader {
     private static final String[] col = new String[]{"identity","label","type","code","icao","desc","region","runways","longest","elev","country","city","lat","lon","author","date"};
 
+    /**
+     * @description: method for loading all nodes
+     * @param graph target graph
+     * @param nodeFile file of node info
+     * */
     public static void LoadAllNode(JanusGraph graph,String nodeFile) throws IOException, CsvException {
         CSVReader reader = new CSVReader(new FileReader(nodeFile));
         List<String[]> r = reader.readAll();
@@ -26,6 +31,11 @@ public class NodeLoader {
         long nodeFinished = System.currentTimeMillis();
         System.out.printf("Node finished take %f s\n",0.001*(nodeFinished-startTime) );
     }
+    /**
+     * @description: method for loading single node
+     * @param graph target graph
+     * @param cur string[] for node info including all value for col
+     * */
     public static void LoadSingleNode(JanusGraph graph, String []cur){
         JanusGraphTransaction tx = graph.newTransaction();
 

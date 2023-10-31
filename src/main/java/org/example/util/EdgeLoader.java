@@ -12,6 +12,11 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class EdgeLoader {
+    /**
+     * @apiNote  Method for loading all edge into graph
+     * @param  graph: target graph
+     * @param edgeFile: path to edge file
+     */
     public static void LoadAllEdge(JanusGraph graph, String edgeFile) throws IOException, CsvValidationException {
         long startTime = System.currentTimeMillis();
         CSVReader reader = new CSVReader(new FileReader(edgeFile));

@@ -2,6 +2,9 @@ package org.example.model;
 
 import lombok.Data;
 
+/***
+ * Class Description: Airport Node class entity
+ */
 @Data
 public class AirportNode {
     private String city;

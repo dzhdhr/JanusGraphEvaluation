@@ -2,6 +2,9 @@ package org.example.model;
 import lombok.Data;
 
 import java.util.List;
+/***
+ * Class Description: Index class entity
+ */
 @Data
 public class IndexModel {
     private String indexName;
