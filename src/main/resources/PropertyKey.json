@@ -1,0 +1,72 @@
+ [
+    {
+      "name": "city",
+      "dataType": "String",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "lat",
+      "dataType": "Double",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "lon",
+      "dataType": "Double",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "dist",
+      "dataType": "String",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "identity",
+      "dataType": "String",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "type",
+      "dataType": "String",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "code",
+      "dataType": "String",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "icao",
+      "dataType": "String",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "desc",
+      "dataType": "String",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "region",
+      "dataType": "String",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "runways",
+      "dataType": "Integer",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "longest",
+      "dataType": "Integer",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "elev",
+      "dataType": "Integer",
+      "cardinality": "SINGLE"
+    },
+    {
+      "name": "country",
+      "dataType": "String",
+      "cardinality": "SINGLE"
+    }
+  ]

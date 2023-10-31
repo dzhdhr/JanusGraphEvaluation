@@ -1,0 +1,10 @@
+[
+{
+"name":"route",
+"directed":true,
+"multiplicity":"MULTI"
+}, {
+"name":"contains",
+"directed":true,
+"multiplicity":"MULTI"
+} ]
