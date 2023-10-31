@@ -1,12 +1,31 @@
 package org.example.util;
 
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
 import org.apache.tinkerpop.gremlin.structure.Vertex;
 import org.janusgraph.core.JanusGraph;
 import org.janusgraph.core.JanusGraphTransaction;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+
 public class NodeLoader {
     private static final String[] col = new String[]{"identity","label","type","code","icao","desc","region","runways","longest","elev","country","city","lat","lon","author","date"};
 
+    public static void LoadAllNode(JanusGraph graph,String nodeFile) throws IOException, CsvException {
+        CSVReader reader = new CSVReader(new FileReader(nodeFile));
+        List<String[]> r = reader.readAll();
+        long startTime = System.currentTimeMillis();
+
+        //load node from csv
+        for(int i = 2;i<r.size();i++){
+            String[] cur = r.get(i);
+            LoadSingleNode(graph,cur);
+        }
+        long nodeFinished = System.currentTimeMillis();
+        System.out.printf("Node finished take %f s\n",0.001*(nodeFinished-startTime) );
+    }
     public static void LoadSingleNode(JanusGraph graph, String []cur){
         JanusGraphTransaction tx = graph.newTransaction();
 
