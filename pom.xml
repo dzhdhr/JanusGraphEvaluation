@@ -61,7 +61,7 @@
       <artifactId>nugraph-calltracing</artifactId>
       <scope>system</scope>
       <systemPath>${project.basedir}/src/main/resources/nugraph-calltracing-1.6.5-RELEASE.jar</systemPath>
-      <version>${nugraph-tracing.version}</version>
+      <version>1.6.5</version>
     </dependency>
     <dependency>
       <groupId>org.janusgraph</groupId>
